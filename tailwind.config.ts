@@ -27,17 +27,20 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					muted: 'hsl(var(--primary-muted))'
+					muted: 'hsl(var(--primary-muted))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
-					muted: 'hsl(var(--secondary-muted))'
+					muted: 'hsl(var(--secondary-muted))',
+					glow: 'hsl(var(--secondary-glow))'
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))',
-					hover: 'hsl(var(--accent-hover))'
+					hover: 'hsl(var(--accent-hover))',
+					vibrant: 'hsl(var(--accent-vibrant))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -66,69 +69,75 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
 				},
 				'fade-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(20px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				},
 				'slide-in-left': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateX(-20px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateX(0)'
-					}
+					'0%': { opacity: '0', transform: 'translateX(-30px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'slide-in-right': {
+					'0%': { opacity: '0', transform: 'translateX(30px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
 				},
 				'scale-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'scale(0.95)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'scale(1)'
-					}
+					'0%': { opacity: '0', transform: 'scale(0.9)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
+				'bounce-in': {
+					'0%': { opacity: '0', transform: 'scale(0.3)' },
+					'50%': { opacity: '1', transform: 'scale(1.05)' },
+					'70%': { transform: 'scale(0.9)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 20px var(--primary)' },
+					'50%': { boxShadow: '0 0 40px var(--primary), 0 0 60px var(--primary)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '-200% 0' },
+					'100%': { backgroundPosition: '200% 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'slide-in-left': 'slide-in-left 0.5s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'fade-in': 'fade-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				'slide-in-left': 'slide-in-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				'slide-in-right': 'slide-in-right 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				'scale-in': 'scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+				'bounce-in': 'bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'float': 'float 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'shimmer': 'shimmer 2s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-subtle': 'var(--gradient-subtle)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-glow': 'var(--gradient-glow)',
+				'gradient-mesh': 'var(--gradient-mesh)',
+				'shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)'
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
 				'card-hover': 'var(--shadow-card-hover)',
-				'hero': 'var(--shadow-hero)'
+				'hero': 'var(--shadow-hero)',
+				'glow': 'var(--shadow-glow)',
+				'colorful': 'var(--shadow-colorful)'
 			}
 		}
 	},
