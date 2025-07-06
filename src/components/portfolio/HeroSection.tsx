@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Mail, FileText, Download, ExternalLink } from "lucide-react";
-import drMaheshPortrait from "@/assets/dr-mahesh-portrait.jpg";
+// import drMaheshPortrait from "@/assets/dr-mahesh-portrait.jpg";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-glow rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-glow rounded-full blur-2xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-mesh rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary-glow/30 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
       </div>
@@ -18,7 +18,7 @@ const HeroSection = () => {
             {/* Enhanced Content */}
             <div className="text-center lg:text-left animate-fade-in">
               <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-primary-foreground/90 text-sm font-medium border border-white/20 animate-shimmer bg-shimmer bg-size-200">
+                <span className="inline-block px-6 py-2 bg-yellow-400 text-gray-900 rounded-full text-lg font-bold shadow-lg ring-2 ring-yellow-200">
                   ✨ 24+ Years of Excellence
                 </span>
               </div>
@@ -37,6 +37,7 @@ const HeroSection = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start animate-bounce-in">
+                <a href="#contact" className="focus:outline-none">
                 <Button 
                   size="lg" 
                   className="gap-3 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-110 shadow-colorful hover:shadow-glow transition-all duration-500 backdrop-blur-sm border border-primary/30 group font-bold"
@@ -45,15 +46,18 @@ const HeroSection = () => {
                   <span className="font-black">Let's Connect</span>
                   <ExternalLink className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                 </Button>
+              </a>
                 
+                <a href="/Mahesh%20resume%20latest.docx" download className="focus:outline-none">
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="gap-3 border-2 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 hover:scale-110 transition-all duration-500 backdrop-blur-sm group font-bold"
+                  className="gap-3 bg-white border-2 border-primary/30 text-blue-700 hover:bg-primary/10 hover:text-blue-800 hover:border-primary/50 hover:scale-105 shadow transition-all duration-300 group font-bold"
                 >
                   <Download className="h-6 w-6 group-hover:animate-bounce" />
                   <span className="font-black">Download Resume</span>
                 </Button>
+              </a>
               </div>
               
               {/* Stats Row */}
@@ -75,7 +79,7 @@ const HeroSection = () => {
             
             {/* Enhanced Profile Image */}
             <div className="flex justify-center lg:justify-end animate-scale-in">
-              <div className="relative group">
+              <div className="relative group mt-4">
                 {/* Static rings */}
                 <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-2xl"></div>
                 <div className="absolute inset-4 rounded-full bg-gradient-secondary opacity-30 blur-xl"></div>
@@ -83,16 +87,16 @@ const HeroSection = () => {
                 {/* Main image container - FIXED POSITION */}
                 <div className="relative">
                   <img
-                    src={drMaheshPortrait}
+                    src={"/WhatsApp Image 2025-07-06 at 21.28.29_ebf2bad2.jpg"}
                     alt="Dr. Mahesh G - Professional Portrait"
-                    className="relative w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover rounded-full shadow-hero border-4 border-primary/30 group-hover:scale-105 transition-all duration-700 backdrop-blur-sm"
+                    className="relative w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover object-center rounded-full shadow-hero border-4 border-primary/30 scale-95 group-hover:scale-105 transition-all duration-700 backdrop-blur-sm translate-y-2"
                   />
                   
                   {/* Fixed badges */}
-                  <div className="absolute -top-4 -right-4 bg-gradient-primary text-foreground px-4 py-2 rounded-full text-sm font-bold shadow-glow">
+                  <div className="absolute -top-4 -right-4 bg-white text-blue-700 px-5 py-2 rounded-full text-base font-bold shadow-lg ring-2 ring-blue-200">
                     PhD ✨
                   </div>
-                  <div className="absolute -bottom-4 -left-4 bg-gradient-secondary text-foreground px-4 py-2 rounded-full text-sm font-bold shadow-glow">
+                  <div className="absolute -bottom-4 -left-20 bg-white text-blue-700 px-5 py-2 rounded-full text-base font-bold shadow-lg ring-2 ring-blue-200">
                     Analytics Expert 🚀
                   </div>
                 </div>

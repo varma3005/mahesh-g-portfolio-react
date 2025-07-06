@@ -1,4 +1,5 @@
 import HeroSection from "@/components/portfolio/HeroSection";
+import Footer from "@/components/Footer";
 import AboutSection from "@/components/portfolio/AboutSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
 import EducationSection from "@/components/portfolio/EducationSection";
@@ -18,6 +19,7 @@ const Index = () => {
       <ProjectsSection />
       <AwardsSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 };

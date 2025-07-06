@@ -12,14 +12,14 @@ const SkillsSection = () => {
   ];
 
   const technicalSkills = [
-    { name: "Python", level: "Expert", color: "bg-gradient-primary" },
-    { name: "Tableau", level: "Expert", color: "bg-gradient-secondary" },
-    { name: "MATLAB", level: "Advanced", color: "bg-gradient-primary" },
-    { name: "VBA", level: "Expert", color: "bg-gradient-secondary" },
-    { name: "MS Excel (Advanced)", level: "Expert", color: "bg-gradient-primary" },
-    { name: "SQL", level: "Advanced", color: "bg-gradient-secondary" },
-    { name: "MS Access", level: "Intermediate", color: "bg-gradient-primary" },
-    { name: "Minitab (Six Sigma)", level: "Advanced", color: "bg-gradient-secondary" }
+    { name: "Python", level: "Expert", color: "bg-blue-600" },
+    { name: "Tableau", level: "Expert", color: "bg-blue-600" },
+    { name: "MATLAB", level: "Advanced", color: "bg-blue-600" },
+    { name: "VBA", level: "Expert", color: "bg-blue-600" },
+    { name: "MS Excel (Advanced)", level: "Expert", color: "bg-blue-600" },
+    { name: "SQL", level: "Advanced", color: "bg-blue-600" },
+    { name: "MS Access", level: "Intermediate", color: "bg-blue-600" },
+    { name: "Minitab (Six Sigma)", level: "Advanced", color: "bg-blue-600" }
   ];
 
   const certifications = [
@@ -51,32 +51,23 @@ const SkillsSection = () => {
           {/* Core Expertise with Progress Bars */}
           <Card className="shadow-colorful hover:shadow-hero transition-all duration-700 border-0 bg-gradient-card backdrop-blur-sm hover:scale-105 group">
             <CardHeader className="text-center pb-6">
-              <CardTitle className="text-2xl text-primary flex items-center justify-center gap-2">
+              <CardTitle className="text-2xl text-yellow-400 flex items-center justify-center gap-2">
                 <span className="text-3xl animate-float">🎯</span>
                 Core Expertise
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {coreExpertise.map((item, index) => (
-                  <div 
+                  <div
                     key={index}
-                    className="group/skill hover:translate-x-2 transition-all duration-300"
+                    className="flex items-center gap-4 mb-4 animate-fade-in"
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl group-hover/skill:animate-bounce">{item.icon}</span>
-                        <span className="text-sm font-semibold text-foreground">{item.skill}</span>
-                      </div>
-                      <span className="text-xs text-primary font-bold">{item.level}%</span>
-                    </div>
-                    <div className="w-full bg-accent rounded-full h-2 overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-primary rounded-full transition-all duration-1000 animate-shimmer bg-shimmer bg-size-200"
-                        style={{width: `${item.level}%`}}
-                      ></div>
-                    </div>
+                    <span className="text-2xl md:text-3xl text-white">{item.icon}</span>
+                    <span className="text-base md:text-lg font-bold text-white">
+                      {item.skill}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -92,16 +83,16 @@ const SkillsSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-6 justify-center items-center">
                 {technicalSkills.map((skill, index) => (
                   <Badge 
                     key={index}
                     variant="outline"
-                    className={`${skill.color} text-white border-0 shadow-glow hover:shadow-colorful hover:scale-110 transition-all duration-500 p-3 flex flex-col items-center gap-1 animate-bounce-in group/badge`}
+                    className={`bg-blue-600 text-white border-0 hover:shadow-blue-400 hover:scale-105 transition-all duration-300 px-3 py-2 text-base flex flex-col items-center gap-1 group/badge`}
                     style={{animationDelay: `${index * 0.1}s`}}
                   >
-                    <span className="font-bold text-xs group-hover/badge:animate-shimmer">{skill.name}</span>
-                    <span className="text-xs opacity-90">{skill.level}</span>
+                    <span className="font-bold text-base group-hover/badge:animate-shimmer">{skill.name}</span>
+                    <span className="text-sm opacity-90">{skill.level}</span>
                   </Badge>
                 ))}
               </div>
