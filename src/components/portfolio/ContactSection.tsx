@@ -45,22 +45,22 @@ const ContactSection = () => {
   
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-white via-blue-50 to-blue-100">
-      <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+    <section id="contact" className="py-12 md:py-20 bg-gradient-to-br from-white via-blue-50 to-blue-100">
+      <div className="container mx-auto max-w-6xl px-2 sm:px-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             Let's Connect
           </h2>
           <div className="w-24 h-1 bg-primary-foreground mx-auto rounded-full"></div>
-          <p className="text-xl text-primary-foreground/80 mt-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-primary-foreground/80 mt-6 sm:mt-8 max-w-2xl mx-auto">
             Ready to drive data-driven transformation in your organization? Let's discuss how my expertise can help achieve your business goals.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto w-full">
           <Card className="shadow-hero bg-white/90 border border-gray-200">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8">
+            <CardContent className="p-4 sm:p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 {contactInfo.map((contact, index) => (
                   <div key={index} className="flex items-center gap-4 group">
                     <div className="flex-shrink-0 w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center text-primary-foreground group-hover:bg-primary-foreground group-hover:text-primary transition-all duration-300">
@@ -91,10 +91,10 @@ const ContactSection = () => {
 
               {/* Contact Form */}
               <div className="mt-16">
-                <Card className="bg-neutral-800 border border-neutral-700 text-white shadow-lg">
-                  <CardContent className="p-6 md:p-10">
-                    <h3 className="text-2xl font-semibold text-white mb-6 text-center animate-fade-in">Send a Message</h3>
-                    <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6" autoComplete="off">
+                <Card className="bg-neutral-800 border border-neutral-700 text-white shadow-lg mt-10 md:mt-16">
+                  <CardContent className="p-4 sm:p-6 md:p-10">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center animate-fade-in">Send a Message</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4 sm:space-y-6" autoComplete="off">
                       {/* Replace 'YOUR_ACCESS_KEY' with your actual Web3Forms access key */}
                       <input type="hidden" name="access_key" value="bef288a3-1c29-4852-ab02-18a34759bc9a" />
                       <div>

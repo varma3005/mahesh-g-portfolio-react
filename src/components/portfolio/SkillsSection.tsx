@@ -29,25 +29,25 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-mesh rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-primary rounded-full blur-2xl animate-float" style={{animationDelay: '1.5s'}}></div>
       </div>
 
-      <div className="container mx-auto max-w-7xl px-4 relative z-10">
-        <div className="text-center mb-20 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <div className="container mx-auto max-w-7xl px-2 sm:px-4 relative z-10">
+        <div className="text-center mb-12 md:mb-20 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-primary">Skills</span> & Expertise
           </h2>
           <div className="w-32 h-1.5 bg-gradient-primary mx-auto rounded-full animate-shimmer bg-shimmer bg-size-200"></div>
-          <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mt-4 sm:mt-6 max-w-2xl mx-auto">
             Mastering the art and science of data analytics across multiple domains
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Core Expertise with Progress Bars */}
           <Card className="shadow-colorful hover:shadow-hero transition-all duration-700 border-0 bg-gradient-card backdrop-blur-sm hover:scale-105 group">
             <CardHeader className="text-center pb-6">
@@ -57,7 +57,7 @@ const SkillsSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 {coreExpertise.map((item, index) => (
                   <div
                     key={index}
@@ -83,7 +83,7 @@ const SkillsSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 gap-6 justify-center items-center">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6 justify-center items-center">
                 {technicalSkills.map((skill, index) => (
                   <Badge 
                     key={index}
